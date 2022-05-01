@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_food" />
+
+    <EditText
+        android:id="@+id/txtEmai"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="email của bạn"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="password của bạn"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmai"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/txtEmai"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmai" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="301dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#DF1B1B"
+        android:text="Đăng nhập"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="45px"
+        app:layout_constraintEnd_toEndOf="@+id/txtPassword"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/txtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+    <Button
+
+        android:id="@+id/button2"
+        android:layout_width="205dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="#00000000"
+        android:text="Quên mật khẩu ?"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00000000"
+        android:text="Bạn chưa có tài khoản ?"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

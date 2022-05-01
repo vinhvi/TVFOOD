@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "928435644500",
+    "project_id": "tvfood-42fc2",
+    "storage_bucket": "tvfood-42fc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928435644500:android:d7bf42e7a9dca3e2b4e5c1",
+        "android_client_info": {
+          "package_name": "com.example.tvfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928435644500-70fke920bea00ts6t5vu1bup7ku5tqjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tvfood",
+            "certificate_hash": "b84eb0696918f3b8e3055c174152ddce0e76f061"
+          }
+        },
+        {
+          "client_id": "928435644500-jfbh3h94h7kq0a6tsf5d23g0kr61q3d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSnwHbupRzNV5bg60viJ9GgzAvoqvZUiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928435644500-jfbh3h94h7kq0a6tsf5d23g0kr61q3d3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
