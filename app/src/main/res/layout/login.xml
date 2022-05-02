@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnTTK"
         android:layout_width="317dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
