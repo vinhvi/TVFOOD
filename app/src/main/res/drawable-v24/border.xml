@@ -1,0 +1,8 @@
+<com.google.android.material.button.MaterialButton
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="MATERIAL BUTTON"
+    android:textSize="15sp"
+    app:strokeColor="@color/green"
+    app:strokeWidth="2dp" />
