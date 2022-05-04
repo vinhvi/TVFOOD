@@ -9,15 +9,20 @@
         <entry key="..\:/1.LTTBDD/TV_Food/app/src/main/res/layout/create_account.xml" value="0.25" />
         <entry key="..\:/1.LTTBDD/TV_Food/app/src/main/res/layout/food_list.xml" value="0.264" />
         <entry key="..\:/1.LTTBDD/TV_Food/app/src/main/res/layout/login.xml" value="0.264" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/drawable-xhdpi/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/drawable-xhdpi/ic_launcher_foreground.xml" value="0.1275" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/drawable/border.xml" value="0.2265" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/create_account.xml" value="0.1875" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/layout/food_list.xml" value="0.22826086956521738" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/hoan_thanh.xml" value="0.18840579710144928" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/info.xml" value="0.264" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/login.xml" value="0.20425724637681159" />
-        <entry key="..\:/android/TVFOOD/app/src/main/res/layout/menu.xml" value="0.4" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/layout/menu.xml" value="0.20854700854700856" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/payment.xml" value="0.264" />
         <entry key="..\:/android/TVFOOD/app/src/main/res/layout/select_food.xml" value="0.2" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />
+        <entry key="..\:/android/TVFOOD/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.127" />
       </map>
     </option>
   </component>
