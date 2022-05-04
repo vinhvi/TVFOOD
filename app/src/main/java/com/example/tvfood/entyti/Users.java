@@ -5,15 +5,33 @@ public class Users {
     private String hoTen;
     private String email;
     private String sdt;
-    private String diaChi;
+    private String diaChiSN;
+    private String diaChiPQ;
     private String pass;
 
-    public Users(String hoTen, String email, String sdt, String diaChi, String pass) {
+    public Users(String hoTen, String email, String sdt, String diaChiSN, String diaChiPQ, String pass) {
         this.hoTen = hoTen;
         this.email = email;
         this.sdt = sdt;
-        this.diaChi = diaChi;
+        this.diaChiSN = diaChiSN;
+        this.diaChiPQ = diaChiPQ;
         this.pass = pass;
+    }
+
+    public String getDiaChiSN() {
+        return diaChiSN;
+    }
+
+    public void setDiaChiSN(String diaChiSN) {
+        this.diaChiSN = diaChiSN;
+    }
+
+    public String getDiaChiPQ() {
+        return diaChiPQ;
+    }
+
+    public void setDiaChiPQ(String diaChiPQ) {
+        this.diaChiPQ = diaChiPQ;
     }
 
     public Users() {
@@ -43,13 +61,6 @@ public class Users {
         this.sdt = sdt;
     }
 
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
 
     public String getPass() {
         return pass;

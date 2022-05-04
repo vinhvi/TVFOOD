@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TVFOOD">
         <activity
-            android:name=".app.MainActivity"
+            android:name=".app.List_food"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

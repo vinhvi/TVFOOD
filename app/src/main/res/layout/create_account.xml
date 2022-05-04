@@ -49,7 +49,7 @@
         android:id="@+id/txtPass2"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Nhập lại password"
         android:inputType="textPersonName"
@@ -62,14 +62,14 @@
         android:id="@+id/txtPass1"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txtDC"
+        app:layout_constraintEnd_toEndOf="@+id/txtDC2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtDC"
-        app:layout_constraintTop_toBottomOf="@+id/txtDC" />
+        app:layout_constraintStart_toStartOf="@+id/txtDC2"
+        app:layout_constraintTop_toBottomOf="@+id/txtDC2" />
 
     <EditText
         android:id="@+id/txtSDT"
@@ -90,7 +90,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Địa chỉ"
+        android:hint="Địa chỉ số nhà, tổ dân phố"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/txtSDT"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,10 +98,23 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSDT" />
 
     <EditText
+        android:id="@+id/txtDC2"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Địa chỉ phường, quận"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtDC"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDC"
+        app:layout_constraintTop_toBottomOf="@+id/txtDC" />
+
+    <EditText
         android:id="@+id/txtHvT"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Họ và tên của bạn"
         android:inputType="textPersonName"
@@ -127,7 +140,6 @@
         android:id="@+id/btnDKTK"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
         android:backgroundTint="#DF1B1B"
         android:text="Đăng ký"
         android:textAllCaps="false"
@@ -136,20 +148,20 @@
         app:cornerRadius="45px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckBox"
+        app:layout_constraintVertical_bias="0.25" />
 
     <CheckBox
         android:id="@+id/btnCheckBox"
         android:layout_width="32dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnDKTK"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@+id/txtPass2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtPass2"
-        app:layout_constraintTop_toBottomOf="@+id/txtPass2"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPass2" />
 
     <Button
         android:id="@+id/btnDK"

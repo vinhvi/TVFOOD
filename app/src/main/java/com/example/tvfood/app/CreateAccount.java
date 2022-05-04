@@ -26,6 +26,7 @@ public class CreateAccount extends AppCompatActivity {
     private EditText txtDc;
     private EditText txtPass1;
     private EditText txtPass2;
+    private EditText txtDC2;
     private CheckBox btnCB;
     private Button btnDKTK;
 
@@ -42,6 +43,7 @@ public class CreateAccount extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         txtSDT = findViewById(R.id.txtSDT);
         txtDc = findViewById(R.id.txtDC);
+        txtDC2 = findViewById(R.id.txtDC2);
         txtPass1 = findViewById(R.id.txtPass1);
         txtPass2 = findViewById(R.id.txtPass2);
 
@@ -71,9 +73,10 @@ public class CreateAccount extends AppCompatActivity {
         String sdt = txtSDT.getText().toString();
         String email = txtEmail.getText().toString();
         String dc = txtDc.getText().toString();
+        String dc2 = txtDC2.getText().toString();
         String pass = txtPass1.getText().toString();
 
-        Users users = new Users(name, email, sdt, dc, pass);
+        Users users = new Users(name, email, sdt, dc, dc2, pass);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference dataUser = database.getReference("users");
         dataUser.setValue(users);

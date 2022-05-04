@@ -12,9 +12,10 @@ public class UsersDao {
         String hoTen = null;
         String email = null;
         String sdt = null;
-        String diaChi = null;
+        String diaChiSN = null;
+        String diaChiPQ = null;
         String pass = null;
-        users = new Users(hoTen, email, sdt, diaChi, pass);
+        users = new Users(hoTen, email, sdt, diaChiSN, diaChiPQ, pass);
         dataUser.setValue(users);
 
     }
