@@ -10,20 +10,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tvfood.R;
 
-public class Food_List extends AppCompatActivity {
-    private Button btnMenu;
+public class Menu extends AppCompatActivity {
+    private Button btnBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.food_list);
-        btnMenu = findViewById(R.id.btnMenu);
-        btnMenu.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.menu);
+        btnBack = findViewById(R.id.btnBack_Menu);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Food_List.this,Menu.class);
-                startActivity(intent);
+                Intent intent = new Intent(Menu.this, Food_List.class);
+                Menu.this.startActivity(intent);
             }
         });
+
     }
 }

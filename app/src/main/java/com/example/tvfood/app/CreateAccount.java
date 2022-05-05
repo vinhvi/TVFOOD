@@ -122,6 +122,8 @@ public class CreateAccount extends AppCompatActivity {
             txtPass2.setError("");
         } else if (pass.equals(pass2)) {
             if (pass.length() < 8) {
+                progressBar.setVisibility(View.INVISIBLE);
+                btnDKTK.setEnabled(true);
                 txtPass1.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
                 txtPass2.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
             } else {

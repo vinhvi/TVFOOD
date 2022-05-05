@@ -20,6 +20,7 @@
         </activity>
         <activity android:label="@string/app_name" android:name=".app.CreateAccount"/>
         <activity android:label="@string/app_name" android:name=".app.Food_List"/>
+        <activity android:label="@string/app_name" android:name=".app.Menu"/>
     </application>
 
 </manifest>
