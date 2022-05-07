@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_add_food"
+        android:layout_width="334dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <EditText
+        android:id="@+id/edt_name_food"
+        android:layout_width="352dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Nhập tên món ăn"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_Uri_image_food"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_Uri_image_food"
+        app:layout_constraintTop_toBottomOf="@+id/edt_Uri_image_food" />
+
+    <EditText
+        android:id="@+id/edt_Uri_image_food"
+        android:layout_width="352dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Uri of image"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_image_food"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_image_food"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_image_food" />
+
+    <EditText
+        android:id="@+id/edt_price_food"
+        android:layout_width="349dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Giá món ăn"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name_food"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_food"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_food" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mct_review_food"
+        android:layout_width="360dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nhập mô tả món ăn"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_price_food"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/edt_price_food"
+        app:layout_constraintTop_toBottomOf="@+id/edt_price_food" />
+
+    <Button
+        android:id="@+id/btn_add_food"
+        android:layout_width="291dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:text="Thêm"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="40px"
+        app:layout_constraintEnd_toEndOf="@+id/mct_review_food"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/mct_review_food"
+        app:layout_constraintTop_toBottomOf="@+id/mct_review_food" />
+
+    <Button
+        android:id="@+id/btn_add_image_food"
+        android:layout_width="254dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:text="Thêm ảnh"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="40px"
+        app:layout_constraintEnd_toEndOf="@+id/img_add_food"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/img_add_food"
+        app:layout_constraintTop_toBottomOf="@+id/img_add_food" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_addFood"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="81dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/mct_review_food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_food" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

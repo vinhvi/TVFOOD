@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ellipse_1" />
@@ -29,27 +28,30 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Thành công !!"
+        android:layout_width="349dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="64dp"
+        android:text="Đặt hàng thành công !!"
         android:textAlignment="center"
         android:textColor="#F6F4F4"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView11"
-        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="ok"
+        android:id="@+id/btn_OK"
+        android:layout_width="303dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#E60C0C"
+        android:text="OK"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="40px"
         app:layout_constraintEnd_toEndOf="@+id/textView17"
-        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

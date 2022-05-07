@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txt_int"
         android:layout_width="178dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
@@ -25,10 +25,10 @@
         android:layout_width="109dp"
         android:layout_height="63dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/txt_int"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/txt_int"
+        app:layout_constraintTop_toBottomOf="@+id/txt_int"
         app:srcCompat="@drawable/logo_food" />
 
     <Button
@@ -145,8 +145,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="392dp"
-        android:layout_height="122dp"
+        android:layout_width="408dp"
+        android:layout_height="125dp"
         android:background="#14D9F4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
