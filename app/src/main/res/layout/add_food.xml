@@ -18,31 +18,14 @@
 
     <EditText
         android:id="@+id/edt_name_food"
-        android:layout_width="352dp"
+        android:layout_width="350dp"
         android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Nhập tên món ăn"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edt_Uri_image_food"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_Uri_image_food"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Uri_image_food" />
-
-    <EditText
-        android:id="@+id/edt_Uri_image_food"
-        android:layout_width="352dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Uri of image"
-        android:inputType="textPersonName"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_add_image_food"
-        app:layout_constraintHorizontal_bias="0.598"
         app:layout_constraintStart_toStartOf="@+id/btn_add_image_food"
         app:layout_constraintTop_toBottomOf="@+id/btn_add_image_food" />
 
@@ -50,7 +33,7 @@
         android:id="@+id/edt_price_food"
         android:layout_width="349dp"
         android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Giá món ăn"
         android:inputType="textPersonName"
@@ -64,7 +47,7 @@
         android:id="@+id/mct_review_food"
         android:layout_width="360dp"
         android:layout_height="145dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:hint="Nhập mô tả món ăn"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/edt_price_food"
@@ -76,13 +59,13 @@
         android:id="@+id/btn_add_food"
         android:layout_width="291dp"
         android:layout_height="59dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:text="Thêm"
         android:textSize="24sp"
         android:textStyle="bold"
         app:cornerRadius="40px"
         app:layout_constraintEnd_toEndOf="@+id/mct_review_food"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="@+id/mct_review_food"
         app:layout_constraintTop_toBottomOf="@+id/mct_review_food" />
 

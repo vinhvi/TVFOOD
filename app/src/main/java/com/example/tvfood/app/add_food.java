@@ -1,6 +1,7 @@
 package com.example.tvfood.app;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -22,6 +23,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tvfood.R;
@@ -46,7 +48,6 @@ public class add_food extends AppCompatActivity {
     private MultiAutoCompleteTextView mct_review;
     private EditText edt_name;
     private EditText editText_price;
-    private EditText edt_Uri;
     private ProgressBar progressBar;
     private Foods foods;
     private FirebaseDatabase database;
@@ -66,26 +67,20 @@ public class add_food extends AppCompatActivity {
         mct_review = findViewById(R.id.mct_review_food);
         edt_name = findViewById(R.id.edt_name_food);
         editText_price = findViewById(R.id.edt_price_food);
-        edt_Uri = findViewById(R.id.edt_Uri_image_food);
-        edt_Uri.setEnabled(false);
         progressBar = findViewById(R.id.progressBar_addFood);
         progressBar.setVisibility(View.INVISIBLE);
 
         btn_imageFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadImage();
+                chooseImage();
             }
         });
 
         btn_addFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edt_Uri.length() == 0) {
-                    Toast.makeText(add_food.this, "Vui lòng chọn lại ảnh !!", Toast.LENGTH_SHORT).show();
-                } else {
-                    addFood();
-                }
+                uploadImage();
             }
         });
 
@@ -120,9 +115,6 @@ public class add_food extends AppCompatActivity {
     }
 
     private void uploadImage() {
-
-        chooseImage();
-
         Bitmap capture = Bitmap.createBitmap(imageFood.getWidth(), imageFood.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas captureCanvas = new Canvas(capture);
         imageFood.draw(captureCanvas);
@@ -156,11 +148,11 @@ public class add_food extends AppCompatActivity {
             public void onComplete(@NonNull Task<Uri> task) {
                 if (task.isSuccessful()) {
                     Uri dowloadUri = task.getResult();
-                    edt_Uri.setText(dowloadUri.toString());
+                    String uri_image = dowloadUri.toString();
+                    addFood(uri_image);
                     progressBar.setVisibility(View.INVISIBLE);
                     btn_addFood.setEnabled(true);
                     btn_imageFood.setEnabled(true);
-
                 }
             }
         });
@@ -168,12 +160,8 @@ public class add_food extends AppCompatActivity {
 
     }
 
-    private void addFood() {
-        progressBar.setVisibility(View.VISIBLE);
-        btn_addFood.setEnabled(false);
-        btn_imageFood.setEnabled(false);
+    private void addFood(String image) {
         String name = edt_name.getText().toString();
-        String image = edt_Uri.getText().toString();
         double price = Double.parseDouble(editText_price.getText().toString());
         String review = mct_review.getText().toString();
         foods = new Foods(name, review, price, image);
@@ -183,19 +171,23 @@ public class add_food extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    progressBar.setVisibility(View.INVISIBLE);
-                    btn_addFood.setEnabled(true);
-                    btn_imageFood.setEnabled(true);
-                    Toast.makeText(add_food.this, "Thêm món mới thành công !!", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder showmessgae = new AlertDialog.Builder(add_food.this);
+                    showmessgae.setMessage("Thêm món mới thành công !").
+                            setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.dismiss();
+                                    edt_name.setText("");
+                                    mct_review.setText("");
+                                    editText_price.setText("");
+                                }
+                            })
+                            .create();
+                    showmessgae.show();
                 } else {
-                    progressBar.setVisibility(View.INVISIBLE);
-                    btn_addFood.setEnabled(true);
-                    btn_imageFood.setEnabled(true);
                     Toast.makeText(add_food.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-
-
 }

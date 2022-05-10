@@ -9,95 +9,91 @@
         android:id="@+id/textView18"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="Thông tin cà nhân"
         android:textAlignment="center"
         android:textColor="#131313"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edt_Name"
         android:layout_width="352dp"
         android:layout_height="55dp"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Họ"
-        android:textColor="#201E1E"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="352dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="MAIL"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName7"
-        android:layout_width="352dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Địa chỉ"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName8"
-        android:layout_width="352dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Số điện thoại"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="355dp"
-        android:layout_height="56dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Tên"
+        android:textColor="#201E1E"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <EditText
+        android:id="@+id/edtSDT"
+        android:layout_width="352dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <EditText
+        android:id="@+id/edtdcPQ"
+        android:layout_width="352dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtdcSN" />
+
+    <EditText
+        android:id="@+id/edtdcSN"
+        android:layout_width="352dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtSDT" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="355dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_Name"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_Name"
+        app:layout_constraintTop_toBottomOf="@+id/edt_Name" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#C81E11"
         android:text="Lưu"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintEnd_toEndOf="@+id/edtdcPQ"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/edtdcPQ"
+        app:layout_constraintTop_toBottomOf="@+id/edtdcPQ" />
 </androidx.constraintlayout.widget.ConstraintLayout>
