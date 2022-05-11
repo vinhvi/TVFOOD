@@ -17,7 +17,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-        btnBack = findViewById(R.id.btnBack_Menu);
+        btnBack = findViewById(R.id.btnBack_admin_menu);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

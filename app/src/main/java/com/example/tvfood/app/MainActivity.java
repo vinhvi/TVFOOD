@@ -79,10 +79,18 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.INVISIBLE);
                             btnLogin.setEnabled(true);
+                            if (email.equals("admin@gmail.com")){
+                                Intent intent1 = new Intent(MainActivity.this, Admin_menu.class);
+                                MainActivity.this.startActivity(intent1);
+                            }
+                            else {
+                                Intent intent2 = new Intent(MainActivity.this, Food_List.class);
+                                MainActivity.this.startActivity(intent2);
+                            }
                             edtEmail.setText("");
                             edtPass.setText("");
-                            Intent intent = new Intent(MainActivity.this, Food_List.class);
-                            MainActivity.this.startActivity(intent);
+
+
                         } else {
                             Toast.makeText(MainActivity.this, "email or password khong dung!!", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.INVISIBLE);

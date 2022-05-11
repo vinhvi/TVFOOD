@@ -87,13 +87,35 @@
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
         android:backgroundTint="#C81E11"
         android:text="Lưu"
-        app:layout_constraintEnd_toEndOf="@+id/edtdcPQ"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/edtdcPQ"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack_ifor_user"
+        app:layout_constraintStart_toEndOf="@+id/btnBack_ifor_user"
+        app:layout_constraintTop_toTopOf="@+id/btnBack_ifor_user"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnBack_ifor_user"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#C81E11"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtdcPQ" />
+
+    <Button
+        android:id="@+id/btn_Xoa_user"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#C81E11"
+        android:text="Xoa"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdate" />
 </androidx.constraintlayout.widget.ConstraintLayout>

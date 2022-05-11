@@ -18,6 +18,14 @@ public class Users {
         this.pass = pass;
     }
 
+    public Users(String hoTen, String email, String sdt, String diaChiSN, String diaChiPQ) {
+        this.hoTen = hoTen;
+        this.email = email;
+        this.sdt = sdt;
+        this.diaChiSN = diaChiSN;
+        this.diaChiPQ = diaChiPQ;
+    }
+
     public String getDiaChiSN() {
         return diaChiSN;
     }
