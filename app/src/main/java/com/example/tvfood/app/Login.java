@@ -12,12 +12,19 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.tvfood.R;
+import com.example.tvfood.entyti.Order;
+import com.example.tvfood.entyti.Ram;
+import com.example.tvfood.entyti.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.UUID;
+
+public class Login extends AppCompatActivity {
     private Button btnCreateAcc;
     private EditText edtEmail;
     private EditText edtPass;
@@ -41,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         btnCreateAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CreateAccount.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(Login.this, CreateAccount.class);
+                Login.this.startActivity(intent);
             }
         });
         btnQuen.setOnClickListener(new View.OnClickListener() {
@@ -76,15 +83,28 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.INVISIBLE);
                             btnLogin.setEnabled(true);
+                            if (email.equals("admin@gmail.com")) {
+                                Intent intent1 = new Intent(Login.this, Admin_menu.class);
+                                Login.this.startActivity(intent1);
+                            } else {
+                                String id_user = mAuth.getUid();
+                                String id_bill = UUID.randomUUID().toString();
+                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                DatabaseReference mRef = database.getReference("ram");
+                                Ram ram = new Ram(new Order(id_bill), new User(id_user));
+                                mRef.child(id_user).setValue(ram);
+                                Intent intent2 = new Intent(Login.this, Food_List.class);
+                                Login.this.startActivity(intent2);
+                            }
                             edtEmail.setText("");
                             edtPass.setText("");
-                            Intent intent = new Intent(MainActivity.this, Food_List.class);
-                            MainActivity.this.startActivity(intent);
+
+
                         } else {
-                            Toast.makeText(MainActivity.this, "email or password khong dung!!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "email or password khong dung!!", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.INVISIBLE);
                             btnLogin.setEnabled(true);
 

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TVFOOD">
         <activity
-            android:name=".app.Infor_user"
+            android:name=".app.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             android:name=".app.CreateAccount"
             android:label="@string/app_name" />
         <activity
-            android:name=".app.MainActivity"
+            android:name=".app.Food_List"
             android:label="@string/app_name" />
         <activity
             android:name=".app.Menu"
@@ -32,6 +32,21 @@
             android:label="@string/app_name" />
         <activity
             android:name=".app.Payment"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Add_food"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Admin_menu"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Update_Address"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Food_infor"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Infor_user"
             android:label="@string/app_name" />
 
 

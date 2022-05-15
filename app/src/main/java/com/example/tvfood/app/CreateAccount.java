@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tvfood.R;
-import com.example.tvfood.entyti.Users;
+import com.example.tvfood.entyti.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -35,7 +35,7 @@ public class CreateAccount extends AppCompatActivity {
     private CheckBox btnCB;
     private ProgressBar progressBar;
     private Button btnDKTK;
-    private Users users;
+    private User user;
     //upload user to firebase
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
@@ -62,7 +62,7 @@ public class CreateAccount extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(CreateAccount.this, MainActivity.class);
+                Intent intent1 = new Intent(CreateAccount.this, Login.class);
                 startActivity(intent1);
             }
         });
@@ -127,22 +127,23 @@ public class CreateAccount extends AppCompatActivity {
                 txtPass1.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
                 txtPass2.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
             } else {
-                users = new Users(name, email, sdt, dc, dc2, pass);
                 database = FirebaseDatabase.getInstance();
-                databaseReference = database.getReference("users");
+                databaseReference = database.getReference("user");
                 mAuth = FirebaseAuth.getInstance();
                 mAuth.createUserWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    String id = mAuth.getUid();
+                                    user = new User(name, email, sdt, dc, dc2, pass, id);
+                                    databaseReference.child(id).setValue(user);
                                     progressBar.setVisibility(View.INVISIBLE);
                                     btnDKTK.setEnabled(true);
-                                    databaseReference.child(sdt).setValue(users);
                                     Toast.makeText(CreateAccount.this,
                                             "Đăng ký tài khoản thành công. Vui lòng đăng nhập để gọi món !!",
                                             Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(CreateAccount.this, MainActivity.class);
+                                    Intent intent = new Intent(CreateAccount.this, Login.class);
                                     CreateAccount.this.startActivity(intent);
                                 } else {
                                     progressBar.setVisibility(View.INVISIBLE);

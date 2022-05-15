@@ -9,7 +9,7 @@
         android:id="@+id/textView18"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Thông tin cà nhân"
         android:textAlignment="center"
         android:textColor="#131313"
@@ -17,83 +17,101 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack_ifor_user" />
 
     <EditText
-        android:id="@+id/edt_Name"
+        android:id="@+id/edtName_update"
         android:layout_width="352dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#201E1E"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
-        android:id="@+id/edtSDT"
+        android:id="@+id/edtSDT_update"
         android:layout_width="352dp"
         android:layout_height="60dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail_update"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintStart_toStartOf="@+id/edtEmail_update"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail_update" />
 
     <EditText
-        android:id="@+id/edtdcPQ"
+        android:id="@+id/edtdcPQ_update_user"
         android:layout_width="352dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtdcSN_update_user"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/edtdcSN" />
+        app:layout_constraintStart_toStartOf="@+id/edtdcSN_update_user"
+        app:layout_constraintTop_toBottomOf="@+id/edtdcSN_update_user" />
 
     <EditText
-        android:id="@+id/edtdcSN"
+        android:id="@+id/edtdcSN_update_user"
         android:layout_width="352dp"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/edtSDT_update"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/edtSDT" />
+        app:layout_constraintStart_toStartOf="@+id/edtSDT_update"
+        app:layout_constraintTop_toBottomOf="@+id/edtSDT_update" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtEmail_update"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edt_Name"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edt_Name"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Name" />
+        app:layout_constraintEnd_toEndOf="@+id/edtName_update"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/edtName_update"
+        app:layout_constraintTop_toBottomOf="@+id/edtName_update" />
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="350dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#C81E11"
         android:text="Lưu"
-        app:layout_constraintEnd_toEndOf="@+id/edtdcPQ"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/edtdcPQ"
-        app:layout_constraintTop_toBottomOf="@+id/edtdcPQ" />
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="30px"
+        app:layout_constraintEnd_toEndOf="@+id/edtdcPQ_update_user"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtdcPQ_update_user"
+        app:layout_constraintTop_toBottomOf="@+id/edtdcPQ_update_user" />
+
+    <Button
+        android:id="@+id/btnBack_ifor_user"
+        android:layout_width="109dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00000000"
+        android:drawableLeft="@drawable/back_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
