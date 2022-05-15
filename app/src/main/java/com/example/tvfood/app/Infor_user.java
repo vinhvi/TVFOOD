@@ -31,12 +31,12 @@ public class Infor_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
 
-        edtName = findViewById(R.id.edtName_update);
-        edtEmail = findViewById(R.id.edtEmail_update);
-        edtdcSN = findViewById(R.id.edtdcSN_update_user);
-        edtPQ = findViewById(R.id.edtdcPQ_update_user);
-        edtSDT = findViewById(R.id.edtSDT_update);
-        btnBack = findViewById(R.id.btnBack_ifor_user);
+        edtName = findViewById(R.id.edt_1);
+        edtEmail = findViewById(R.id.edtEmail_update_infor);
+        edtdcSN = findViewById(R.id.edtdcSN_update_user_admin);
+        edtPQ = findViewById(R.id.edtSDT_updateUser);
+        edtSDT = findViewById(R.id.edtEmail_updateUser);
+        btnBack = findViewById(R.id.btnBack_updateUser);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

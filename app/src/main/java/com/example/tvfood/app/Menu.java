@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Menu extends AppCompatActivity {
-    private Button btnBack, btnInfor;
+    private Button btnBack, btnInfor, btnDX;
     private TextView tvName;
 
 
@@ -43,6 +43,14 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Infor_user.class);
+                Menu.this.startActivity(intent);
+            }
+        });
+        btnDX = findViewById(R.id.btn_logout_admin_menu);
+        btnDX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Login.class);
                 Menu.this.startActivity(intent);
             }
         });

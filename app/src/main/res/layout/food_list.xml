@@ -31,12 +31,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btnUpdate_dc_lít_food"
+        android:id="@+id/btnUpdate_dc_list_food"
         android:layout_width="39dp"
         android:layout_height="34dp"
         android:layout_marginStart="4dp"
         android:background="#00000000"
-        android:drawableRight="@drawable/moreif"
+        android:drawableRight="@drawable/_200px_oojs_ui_icon_next_ltr_1"
         app:layout_constraintBottom_toBottomOf="@+id/tv_dcSN"
         app:layout_constraintStart_toEndOf="@+id/tv_dcSN"
         app:layout_constraintTop_toTopOf="@+id/tv_dcSN"
@@ -49,15 +49,15 @@
         android:layout_marginStart="48dp"
         android:background="#00000000"
         android:drawableLeft="@drawable/menu"
-        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate_dc_lít_food"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate_dc_list_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdate_dc_lít_food"
-        app:layout_constraintTop_toTopOf="@+id/btnUpdate_dc_lít_food"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate_dc_list_food"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdate_dc_list_food"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edtName_update"
+        android:id="@+id/edt_1"
         android:layout_width="305dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
@@ -77,10 +77,10 @@
         android:layout_height="49dp"
         android:layout_marginStart="12dp"
         android:background="#00000000"
-        app:layout_constraintBottom_toBottomOf="@+id/edtName_update"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edtName_update"
-        app:layout_constraintTop_toTopOf="@+id/edtName_update"
+        app:layout_constraintStart_toEndOf="@+id/edt_1"
+        app:layout_constraintTop_toTopOf="@+id/edt_1"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/basket_1" />
 
@@ -95,7 +95,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.929"
-        app:layout_constraintStart_toEndOf="@+id/edtName_update"
+        app:layout_constraintStart_toEndOf="@+id/edt_1"
         app:layout_constraintTop_toBottomOf="@+id/btnBack_update_dc_payment" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -105,7 +105,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/btn_Payment"
         app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@+id/edtName_update"
-        app:layout_constraintTop_toBottomOf="@+id/edtName_update" />
+        app:layout_constraintStart_toStartOf="@+id/edt_1"
+        app:layout_constraintTop_toBottomOf="@+id/edt_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

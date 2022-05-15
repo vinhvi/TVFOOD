@@ -32,7 +32,7 @@ public class Payment extends AppCompatActivity {
     private RecyclerView rcView;
     private ArrayList<OrderDetail> arrayList = new ArrayList<>();
     PaymentAdapter paymentAdapter;
-    private Button btnback, btnOrder;
+    private Button btnback, btnOrder, btnUpdate;
     private TextView tv_dcSN, tv_dcFull, tvTienFood, tvTongTien, tvPhiShip;
 
 
@@ -64,6 +64,14 @@ public class Payment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Payment.this, Food_List.class);
+                startActivity(intent);
+            }
+        });
+        btnUpdate = findViewById(R.id.btnBack_update_dc_payment);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Payment.this, Update_Address.class);
                 startActivity(intent);
             }
         });
@@ -109,7 +117,7 @@ public class Payment extends AppCompatActivity {
         int soL1 = orderDetail.getSoLuong();
         if (soL1 >= 1) {
             int soL2 = soL1 - 1;
-            myRef.child(orderDetail.getId_Order().getId()).child(orderDetail.getId_Food().getId()).child("count").setValue(soL2);
+            myRef.child(orderDetail.getId_Order().getId()).child(orderDetail.getId_Food().getId()).child("soLuong").setValue(soL2);
             if (soL2 < 1) {
                 myRef.child(orderDetail.getId_Order().getId()).child(orderDetail.getId_Food().getId()).removeValue();
             }

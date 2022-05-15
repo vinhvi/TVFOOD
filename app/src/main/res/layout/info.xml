@@ -17,10 +17,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack_ifor_user" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack_updateUser" />
 
     <EditText
-        android:id="@+id/edtName_update"
+        android:id="@+id/edt_1"
         android:layout_width="352dp"
         android:layout_height="55dp"
         android:layout_marginTop="24dp"
@@ -34,56 +34,56 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
-        android:id="@+id/edtSDT_update"
+        android:id="@+id/edtEmail_updateUser"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail_update"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail_update_infor"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail_update"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail_update" />
+        app:layout_constraintStart_toStartOf="@+id/edtEmail_update_infor"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail_update_infor" />
 
     <EditText
-        android:id="@+id/edtdcPQ_update_user"
+        android:id="@+id/edtSDT_updateUser"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtdcSN_update_user"
+        app:layout_constraintEnd_toEndOf="@+id/edtdcSN_update_user_admin"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtdcSN_update_user"
-        app:layout_constraintTop_toBottomOf="@+id/edtdcSN_update_user" />
+        app:layout_constraintStart_toStartOf="@+id/edtdcSN_update_user_admin"
+        app:layout_constraintTop_toBottomOf="@+id/edtdcSN_update_user_admin" />
 
     <EditText
-        android:id="@+id/edtdcSN_update_user"
+        android:id="@+id/edtdcSN_update_user_admin"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtSDT_update"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail_updateUser"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtSDT_update"
-        app:layout_constraintTop_toBottomOf="@+id/edtSDT_update" />
+        app:layout_constraintStart_toStartOf="@+id/edtEmail_updateUser"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail_updateUser" />
 
     <EditText
-        android:id="@+id/edtEmail_update"
+        android:id="@+id/edtEmail_update_infor"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/edtName_update"
+        app:layout_constraintEnd_toEndOf="@+id/edt_1"
         app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/edtName_update"
-        app:layout_constraintTop_toBottomOf="@+id/edtName_update" />
+        app:layout_constraintStart_toStartOf="@+id/edt_1"
+        app:layout_constraintTop_toBottomOf="@+id/edt_1" />
 
     <Button
         android:id="@+id/btnUpdate"
@@ -98,13 +98,13 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="30px"
-        app:layout_constraintEnd_toEndOf="@+id/edtdcPQ_update_user"
+        app:layout_constraintEnd_toEndOf="@+id/edtSDT_updateUser"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtdcPQ_update_user"
-        app:layout_constraintTop_toBottomOf="@+id/edtdcPQ_update_user" />
+        app:layout_constraintStart_toStartOf="@+id/edtSDT_updateUser"
+        app:layout_constraintTop_toBottomOf="@+id/edtSDT_updateUser" />
 
     <Button
-        android:id="@+id/btnBack_ifor_user"
+        android:id="@+id/btnBack_updateUser"
         android:layout_width="109dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"

@@ -99,7 +99,7 @@
         android:id="@+id/btn_addFood"
         android:layout_width="392dp"
         android:layout_height="47dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#F1EAEA"
         android:drawableEnd="@drawable/_200px_oojs_ui_icon_next_ltr_1"
         android:text="Quản lý món ăn"
@@ -121,35 +121,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnBack_admin_menu"
-        android:layout_width="79dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="#00000000"
-        android:drawableRight="@drawable/back2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
-
-    <TextView
-<<<<<<< HEAD
-        android:id="@+id/tv_Name_user_Menu"
-=======
-        android:id="@+id/textView14"
->>>>>>> origin/master
-        android:layout_width="121dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack_admin_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

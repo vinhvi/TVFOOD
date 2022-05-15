@@ -56,34 +56,25 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_price_update" />
 
     <Button
-        android:id="@+id/btnBack_update_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
-        android:text="Trở về"
+        android:id="@+id/btn_update_food_update"
+        android:layout_width="104dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:text="Sửa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_review_update" />
 
     <Button
-        android:id="@+id/btn_update_food_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Sửa"
-        app:layout_constraintBottom_toBottomOf="@+id/btnBack_update_food"
-        app:layout_constraintStart_toEndOf="@+id/btnBack_update_food"
-        app:layout_constraintTop_toTopOf="@+id/btnBack_update_food"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/btn_delete_update_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="58dp"
         android:layout_marginEnd="16dp"
         android:text="Xóa"
         app:layout_constraintBottom_toBottomOf="@+id/btn_update_food_update"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toEndOf="@+id/btn_update_food_update"
-        app:layout_constraintTop_toTopOf="@+id/btn_update_food_update" />
+        app:layout_constraintTop_toTopOf="@+id/btn_update_food_update"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.example.tvfood.R;
 import com.example.tvfood.entyti.Food;
 import com.example.tvfood.entyti.Order;
@@ -97,7 +98,8 @@ public class Food_infor extends AppCompatActivity {
             Food food = (Food) bundle.get("food_infor");
             tvName.setText(food.getName());
             tvPrice.setText(String.valueOf(food.getPrice()));
-            imageFood.setImageURI(Uri.parse(food.getImage()));
+            Glide.with(Food_infor.this).load(food.getImage()).into(imageFood);
+            mat_Review.setText(food.getReview());
             String id = food.getId();
             return id;
         }

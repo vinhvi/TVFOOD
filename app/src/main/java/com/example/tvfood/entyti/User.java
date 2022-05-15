@@ -1,6 +1,8 @@
 package com.example.tvfood.entyti;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String hoTen;
     private String email;
     private String sdt;

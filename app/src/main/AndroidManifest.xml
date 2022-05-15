@@ -48,6 +48,18 @@
         <activity
             android:name=".app.Infor_user"
             android:label="@string/app_name" />
+        <activity
+            android:name=".app.Admin_Food_List"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.List_User"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.Update_food"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".app.UpdateUser"
+            android:label="@string/app_name" />
 
 
     </application>
