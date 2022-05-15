@@ -134,7 +134,11 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/tv_Name_user_Menu"
+=======
+        android:id="@+id/textView14"
+>>>>>>> origin/master
         android:layout_width="121dp"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"

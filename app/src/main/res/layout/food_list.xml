@@ -31,12 +31,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/btnUpdate_dc_list_food"
+        android:id="@+id/btnUpdate_dc_lít_food"
         android:layout_width="39dp"
         android:layout_height="34dp"
         android:layout_marginStart="4dp"
         android:background="#00000000"
-        android:drawableRight="@drawable/_200px_oojs_ui_icon_next_ltr_1"
+        android:drawableRight="@drawable/moreif"
         app:layout_constraintBottom_toBottomOf="@+id/tv_dcSN"
         app:layout_constraintStart_toEndOf="@+id/tv_dcSN"
         app:layout_constraintTop_toTopOf="@+id/tv_dcSN"
@@ -49,11 +49,11 @@
         android:layout_marginStart="48dp"
         android:background="#00000000"
         android:drawableLeft="@drawable/menu"
-        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate_dc_list_food"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate_dc_lít_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnUpdate_dc_list_food"
-        app:layout_constraintTop_toTopOf="@+id/btnUpdate_dc_list_food"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate_dc_lít_food"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdate_dc_lít_food"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText

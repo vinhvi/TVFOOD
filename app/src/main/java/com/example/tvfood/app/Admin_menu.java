@@ -47,7 +47,7 @@ public class Admin_menu extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Admin_menu.this, Login.class);
+                Intent intent = new Intent(Admin_menu.this, MainActivity.class);
                 startActivity(intent);
             }
         });
