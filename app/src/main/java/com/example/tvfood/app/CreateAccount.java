@@ -127,7 +127,6 @@ public class CreateAccount extends AppCompatActivity {
                 txtPass1.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
                 txtPass2.setError("Mật khẩu phải lớn hơn hoặc bằng 8 ký tự");
             } else {
-                users = new Users(name, email, sdt, dc, dc2, pass);
                 database = FirebaseDatabase.getInstance();
                 databaseReference = database.getReference("users");
                 mAuth = FirebaseAuth.getInstance();
@@ -136,9 +135,11 @@ public class CreateAccount extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    String id = mAuth.getUid();
+                                    users = new Users(name, email, sdt, dc, dc2, pass, id);
+                                    databaseReference.child(id).setValue(users);
                                     progressBar.setVisibility(View.INVISIBLE);
                                     btnDKTK.setEnabled(true);
-                                    databaseReference.child(sdt).setValue(users);
                                     Toast.makeText(CreateAccount.this,
                                             "Đăng ký tài khoản thành công. Vui lòng đăng nhập để gọi món !!",
                                             Toast.LENGTH_SHORT).show();

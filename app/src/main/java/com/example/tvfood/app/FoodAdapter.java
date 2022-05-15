@@ -14,15 +14,15 @@ import com.bumptech.glide.Glide;
 import com.example.tvfood.R;
 import com.example.tvfood.entyti.Foods;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHoler> {
-    private List<Foods> mList;
+    private ArrayList<Foods> mList;
     private Context ctx;
 
 
-    public FoodAdapter(List<Foods> mList, Context ctx) {
+    public FoodAdapter(ArrayList<Foods> mList, Context ctx) {
         this.mList = mList;
         this.ctx = ctx;
     }
@@ -43,7 +43,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHoler>
         holder.txtName.setText(foods.getName());
         String price = String.valueOf(foods.getPrice());
         holder.txtPrice.setText(price);
-      Glide.with(ctx).load(mList.get(position).getImage()).into(holder.imageView);
+        Glide.with(ctx).load(mList.get(position).getImage()).into(holder.imageView);
 
     }
 
@@ -54,6 +54,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHoler>
         }
         return 0;
     }
+
 
     public class FoodViewHoler extends RecyclerView.ViewHolder {
         TextView txtName, txtPrice;
@@ -71,4 +72,5 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHoler>
 
         }
     }
+
 }

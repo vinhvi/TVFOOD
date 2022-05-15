@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_food_update"
+        android:layout_width="153dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/edt_name_food_update"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="@+id/image_food_update"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/image_food_update"
+        app:layout_constraintTop_toBottomOf="@+id/image_food_update" />
+
+    <EditText
+        android:id="@+id/edt_price_update"
+        android:layout_width="309dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name_food_update"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_food_update"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_food_update" />
+
+    <EditText
+        android:id="@+id/edt_review_update"
+        android:layout_width="312dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/edt_price_update"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_price_update"
+        app:layout_constraintTop_toBottomOf="@+id/edt_price_update" />
+
+    <Button
+        android:id="@+id/btnBack_update_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Trở về"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_review_update" />
+
+    <Button
+        android:id="@+id/btn_update_food_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Sửa"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack_update_food"
+        app:layout_constraintStart_toEndOf="@+id/btnBack_update_food"
+        app:layout_constraintTop_toTopOf="@+id/btnBack_update_food"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_delete_update_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Xóa"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_update_food_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_update_food_update"
+        app:layout_constraintTop_toTopOf="@+id/btn_update_food_update" />
+</androidx.constraintlayout.widget.ConstraintLayout>

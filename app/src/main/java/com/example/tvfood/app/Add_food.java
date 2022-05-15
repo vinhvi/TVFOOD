@@ -8,7 +8,6 @@ import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,7 +40,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
-public class add_food extends AppCompatActivity {
+public class Add_food extends AppCompatActivity {
     private ImageView imageFood;
     private Button btn_imageFood;
     private Button btn_addFood;
@@ -128,10 +127,10 @@ public class add_food extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         btn_addFood.setEnabled(false);
         btn_imageFood.setEnabled(false);
-        uploadTask.addOnCompleteListener(add_food.this, new OnCompleteListener<UploadTask.TaskSnapshot>() {
+        uploadTask.addOnCompleteListener(Add_food.this, new OnCompleteListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                Toast.makeText(add_food.this, "đã tải ảnh lên storage!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add_food.this, "đã tải ảnh lên storage!!", Toast.LENGTH_SHORT).show();
             }
         });
         Task<Uri> getDowloadUri = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
@@ -143,7 +142,7 @@ public class add_food extends AppCompatActivity {
                 return storageReference.getDownloadUrl();
             }
         });
-        getDowloadUri.addOnCompleteListener(add_food.this, new OnCompleteListener<Uri>() {
+        getDowloadUri.addOnCompleteListener(Add_food.this, new OnCompleteListener<Uri>() {
             @Override
             public void onComplete(@NonNull Task<Uri> task) {
                 if (task.isSuccessful()) {
@@ -161,17 +160,18 @@ public class add_food extends AppCompatActivity {
     }
 
     private void addFood(String image) {
-        String name = edt_name.getText().toString();
-        double price = Double.parseDouble(editText_price.getText().toString());
-        String review = mct_review.getText().toString();
-        foods = new Foods(name, review, price, image);
+       String id = UUID.randomUUID().toString();
+        String name = edt_name.getText().toString().trim();
+        double price = Double.parseDouble(editText_price.getText().toString().trim());
+        String review = mct_review.getText().toString().trim();
+        foods = new Foods(id,name, review, price, image);
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("foods");
-        databaseReference.child(String.valueOf(UUID.randomUUID())).setValue(foods).addOnCompleteListener(new OnCompleteListener<Void>() {
+        databaseReference.child(id).setValue(foods).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    AlertDialog.Builder showmessgae = new AlertDialog.Builder(add_food.this);
+                    AlertDialog.Builder showmessgae = new AlertDialog.Builder(Add_food.this);
                     showmessgae.setMessage("Thêm món mới thành công !").
                             setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                 @Override
@@ -185,7 +185,7 @@ public class add_food extends AppCompatActivity {
                             .create();
                     showmessgae.show();
                 } else {
-                    Toast.makeText(add_food.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_food.this, "Thêm thất bại", Toast.LENGTH_SHORT).show();
                 }
             }
         });

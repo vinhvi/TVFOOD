@@ -1,13 +1,23 @@
 package com.example.tvfood.entyti;
 
 public class Users {
-
     private String hoTen;
     private String email;
     private String sdt;
     private String diaChiSN;
     private String diaChiPQ;
     private String pass;
+    private String id;
+
+    public Users(String hoTen, String email, String sdt, String diaChiSN, String diaChiPQ, String pass, String id) {
+        this.hoTen = hoTen;
+        this.email = email;
+        this.sdt = sdt;
+        this.diaChiSN = diaChiSN;
+        this.diaChiPQ = diaChiPQ;
+        this.pass = pass;
+        this.id = id;
+    }
 
     public Users(String hoTen, String email, String sdt, String diaChiSN, String diaChiPQ, String pass) {
         this.hoTen = hoTen;
@@ -16,6 +26,22 @@ public class Users {
         this.diaChiSN = diaChiSN;
         this.diaChiPQ = diaChiPQ;
         this.pass = pass;
+    }
+
+    public Users(String hoTen, String email, String sdt, String diaChiSN, String diaChiPQ) {
+        this.hoTen = hoTen;
+        this.email = email;
+        this.sdt = sdt;
+        this.diaChiSN = diaChiSN;
+        this.diaChiPQ = diaChiPQ;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getDiaChiSN() {

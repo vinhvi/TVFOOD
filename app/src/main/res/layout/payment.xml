@@ -7,21 +7,20 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="396dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="393dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
         app:srcCompat="@drawable/border" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="396dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="393dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/border" />
@@ -46,118 +45,64 @@
         android:layout_width="57dp"
         android:layout_height="49dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dcSN_payment"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dcSN_payment"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/shipper_1" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_dcSN_payment"
         android:layout_width="237dp"
         android:layout_height="49dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="16dp"
         android:text="209/1 cây trâm"
+        android:textAlignment="center"
         android:textColor="#1B1919"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/btnMenu"
+        android:id="@+id/btnBack_update_dc_payment"
         android:layout_width="46dp"
         android:layout_height="47dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:background="#00000000"
         android:drawableEnd="@drawable/_200px_oojs_ui_icon_next_ltr_1"
         android:text=" "
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dcSN_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_dcSN_payment"
+        app:layout_constraintTop_toTopOf="@+id/tv_dcSN_payment"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="241dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/tv_dcFull_payment"
+        android:layout_width="332dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
         android:text="209/1 cây trâm, phường 8, Q.Gó vấp"
         android:textAlignment="center"
         android:textColor="#232222"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="395dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/border" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="178dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="12dp"
-        android:text="Đơn háng của bạn: "
-        android:textColor="#1B1919"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="161dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:text="1x Caffe phượng hoáng lửa"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="94dp"
-        android:layout_height="32dp"
-        android:text="400.000đ "
-        android:textColor="#171616"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:layout_editor_absoluteX="221dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="46dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="12dp"
-        android:background="#00000000"
-        android:drawableLeft="@drawable/cancel"
-        android:text=" "
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dcSN_payment"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="@+id/tv_dcSN_payment"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dcSN_payment" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="177dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-        android:text="Tạm tình (1 Món): "
+        android:text="Tạm tính : "
+        android:textAlignment="center"
         android:textColor="#121111"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,12 +113,14 @@
         android:layout_width="144dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
-        android:text="400.000đ "
+        android:text="0 đ"
         android:textAlignment="center"
         android:textColor="#151515"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/textView10"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -181,20 +128,21 @@
         android:id="@+id/textView12"
         android:layout_width="140dp"
         android:layout_height="37dp"
-        android:layout_marginTop="20dp"
-        android:text="Phì shipper: "
+        android:layout_marginTop="4dp"
+        android:text="Phí shipper: "
         android:textAlignment="center"
         android:textColor="#131212"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="140dp"
-        android:layout_height="41dp"
-        android:text="50.000đ"
+        android:layout_width="145dp"
+        android:layout_height="39dp"
+        android:text="0 đ"
         android:textAlignment="center"
         android:textColor="#201E1E"
         android:textSize="20sp"
@@ -204,100 +152,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="51dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8"
-        app:srcCompat="@drawable/money_1" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="35dp"
-        android:layout_height="27dp"
-        android:background="#00000000"
-        android:drawableEnd="@drawable/_200px_oojs_ui_icon_next_ltr_3"
-        android:text="a"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="136dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="28dp"
-        android:background="#000000"
-        android:text="Add coupon"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:cornerRadius="20px"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toTopOf="@+id/button6"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="148dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        android:text="Tổng cộng"
-        android:textAlignment="center"
-        android:textColor="#100F0F"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="97dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
-        android:text="450.000đ"
-        android:textAlignment="center"
-        android:textColor="#191818"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Đặt hàng"
-        app:cornerRadius="20px"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="72dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="4dp"
-        android:text="Tiền mặt"
-        android:textAlignment="center"
-        android:textColor="#131313"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <Button
         android:id="@+id/btn_Back_payment"
@@ -310,5 +164,73 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="390dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="201dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Đơn hàng của bạn :"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dcFull_payment" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="131dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Tổng tiền: "
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="210dp"
+        android:layout_height="36dp"
+        android:text="0 đ"
+        android:textAlignment="center"
+        android:textColor="@color/fui_bgEmail"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="227dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#EC0D0D"
+        android:text="Đặt hàng"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
