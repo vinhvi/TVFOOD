@@ -40,7 +40,6 @@ public class Food_List extends AppCompatActivity {
     private Button btnMenu, btnUpdate;
     private ImageButton btn_payment;
     private TextView tv_dc, txt_int;
-    private Context ctx;
     ArrayList<Food> arrayList;
 
 

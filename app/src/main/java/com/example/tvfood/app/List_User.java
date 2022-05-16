@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -68,7 +69,14 @@ public class List_User extends AppCompatActivity {
 
             }
         });
-
+        btnBack = findViewById(R.id.btnBack_ListUser);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(List_User.this, Admin_menu.class);
+                startActivity(intent);
+            }
+        });
         getListUser();
     }
 

@@ -68,6 +68,14 @@ public class Admin_Food_List extends AppCompatActivity {
 
             }
         });
+        btnBack = findViewById(R.id.btnBack_admin_listFood);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Admin_Food_List.this, Admin_menu.class);
+                startActivity(intent);
+            }
+        });
         btnAdd = findViewById(R.id.button2);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
