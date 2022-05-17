@@ -139,6 +139,7 @@ public class Food_List extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                arrayList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Food foods = dataSnapshot.getValue(Food.class);
                     arrayList.add(foods);

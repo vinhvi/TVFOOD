@@ -40,7 +40,7 @@ public class Infor_user extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Infor_user.this, Menu.class);
+                Intent intent = new Intent(Infor_user.this, List_User.class);
                 Infor_user.this.startActivity(intent);
             }
         });
