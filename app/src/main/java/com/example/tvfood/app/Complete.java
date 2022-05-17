@@ -11,13 +11,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tvfood.R;
 import com.example.tvfood.entyti.Order;
+import com.example.tvfood.entyti.OrderDetail;
 import com.example.tvfood.entyti.Ram;
 import com.example.tvfood.entyti.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.UUID;
 
@@ -57,7 +61,7 @@ public class Complete extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                removeBill(id_Order);
+                                removeOrderDetail(id_Order);
                             }
                         }
                     });
@@ -68,13 +72,21 @@ public class Complete extends AppCompatActivity {
 
     void removeBill(String id_bill) {
         FirebaseDatabase database1 = FirebaseDatabase.getInstance();
-        DatabaseReference mRef1 = database1.getReference("bill/" + id_bill);
-        mRef1.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+        DatabaseReference mRef1 = database1.getReference("orderDetail/" + id_bill);
+        mRef1.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    removeOrderDetail(id_bill);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                OrderDetail orderDetail = snapshot.getValue(OrderDetail.class);
+                if (orderDetail == null) {
+                    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+                    DatabaseReference mRef2 = database1.getReference("order/" + id_bill);
+                    mRef2.removeValue();
                 }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }
@@ -86,8 +98,8 @@ public class Complete extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
+                    removeBill(id_bill);
                     Intent intent = new Intent(Complete.this, Food_List.class);
-                    intent.putExtra("key", "0");
                     startActivity(intent);
                 }
             }

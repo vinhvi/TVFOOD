@@ -76,6 +76,7 @@ public class Payment extends AppCompatActivity {
             }
         });
         getAdress();
+        checkPayMent();
         btnOrder = findViewById(R.id.btnOrder);
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +86,7 @@ public class Payment extends AppCompatActivity {
             }
         });
         getIdOrder();
+        checkOrder();
     }
 
     private void getAdress() {
@@ -101,12 +103,53 @@ public class Payment extends AppCompatActivity {
                 } else {
                     Toast.makeText(Payment.this, "user is nulling", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(Payment.this, "Get data failed!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void checkOrder() {
+        FirebaseUser id = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("ram/" + id.getUid());
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Ram ram = snapshot.getValue(Ram.class);
+                if (ram != null) {
+                    removeBill(ram.getId_Order().getId());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+    void removeBill(String id_bill) {
+        FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+        DatabaseReference mRef1 = database1.getReference("orderDetail/" + id_bill);
+        mRef1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                OrderDetail orderDetail = snapshot.getValue(OrderDetail.class);
+                if (orderDetail == null) {
+                    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+                    DatabaseReference mRef2 = database1.getReference("order/" + id_bill);
+                    mRef2.removeValue();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }
@@ -122,31 +165,7 @@ public class Payment extends AppCompatActivity {
                 myRef.child(orderDetail.getId_Order().getId()).child(orderDetail.getId_Food().getId()).removeValue();
             }
         }
-        setLai();
         setTinhTien();
-    }
-
-    void setLai() {
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        String id_user = mAuth.getUid();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference mRef = database.getReference("ram/" + id_user);
-        mRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Ram ram = snapshot.getValue(Ram.class);
-                if (ram != null) {
-                    String id_Bill = ram.getId_Order().getId();
-                    getData1(id_Bill);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     void getIdOrder() {
@@ -178,34 +197,12 @@ public class Payment extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    OrderDetail orderDetail = dataSnapshot.getValue(OrderDetail.class);
-                    arrayList.add(orderDetail);
-                }
-                paymentAdapter.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Payment.this, "load data failed", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    void getData1(String id_Bill) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("orderDetail/" + id_Bill);
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 arrayList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     OrderDetail orderDetail = dataSnapshot.getValue(OrderDetail.class);
                     arrayList.add(orderDetail);
                 }
                 paymentAdapter.notifyDataSetChanged();
-
             }
 
             @Override
@@ -214,6 +211,7 @@ public class Payment extends AppCompatActivity {
             }
         });
     }
+
 
     void setTinhTien() {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -261,4 +259,45 @@ public class Payment extends AppCompatActivity {
             }
         });
     }
+
+    void checkPayMent() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        String id_user = mAuth.getUid();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference mRef = database.getReference("ram/" + id_user);
+        mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Ram ram = snapshot.getValue(Ram.class);
+                if (ram != null) {
+                    setPayUp(ram.getId_Order().getId());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    void setPayUp(String id) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("orderDetail/" + id);
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.getChildrenCount() <= 0) {
+                    btnOrder.setEnabled(false);
+                } else
+                    btnOrder.setEnabled(true);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 }
